@@ -4,6 +4,7 @@ import Layout from '../Components/Layout';
 import Hero from '../Components/Home/Hero';
 import Bailemos from '../Components/Home/Bailemos';
 import NuestrasClases from '../Components/Home/NuestrasClases';
+import Galeria from '../Components/Home/Galeria';
 
 const Home = () => {
   const titulo = 'Lorem Ipsum ipso, Lorem Ipsum.';
@@ -12,9 +13,15 @@ const Home = () => {
 
   return (
     <Layout>
-      <Hero boton={'Inscribete'} parrafo={parrafo} titulo={titulo} />
+      <Hero
+        boton={'Inscribete'}
+        parrafo={parrafo}
+        titulo={titulo}
+        extraInfo={true}
+      />
       <Bailemos />
       <NuestrasClases />
+      <Galeria />
     </Layout>
   );
 };

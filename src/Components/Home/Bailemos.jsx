@@ -4,7 +4,7 @@ import bailemosGala from '../../img/bailemosGala.png';
 const Bailemos = () => {
   return (
     <>
-      <div className='container flex mx-auto justify-around px-10'>
+      <div className='container flex mx-auto justify-around px-10 py-7'>
         <div className='place-self-center w-1/2 px-5'>
           <div>
             <h2 className=''>Bailemos</h2>
@@ -22,7 +22,7 @@ const Bailemos = () => {
         </div>
         <div className=' w-1/2'>
           <img
-            className='w-3/4 mx-auto border-2 rounded-3xl m-8 p-4 border-purple-600'
+            className=' mx-auto border-2 rounded-3xl m-8 p-4 border-purple-600'
             src={bailemosGala}
             alt=''
           />
