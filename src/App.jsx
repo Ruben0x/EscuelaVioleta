@@ -10,6 +10,7 @@ import Contacto from './Pages/Contacto';
 import Acerca from './Pages/Acerca';
 import Footer from './Components/Footer';
 import Clases from './Pages/Clases';
+import ClaseDetalle from './Pages/ClaseDetalle';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route path='/contactanos' element={<Contacto />}></Route>
       <Route path='/acerca' element={<Acerca />}></Route>
       <Route path='/clases' element={<Clases />}></Route>
+      <Route path='/clases/1' element={<ClaseDetalle />}></Route>
     </Routes>
   );
 }
