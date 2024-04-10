@@ -1,5 +1,4 @@
 import React from 'react';
-import ClaseCard from './ClaseCard';
 import Button from '../Button';
 import GridClases from './GridClases';
 

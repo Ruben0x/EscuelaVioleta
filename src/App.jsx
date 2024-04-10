@@ -19,11 +19,11 @@ function App() {
       <Route path='/horario' element={<Horario />}></Route>
       <Route path='/precios' element={<Precios />}></Route>
       <Route path='/profesores' element={<Profesores />}></Route>
-      <Route path='/profesoresInfo' element={<ProfesoresInfo />}></Route>
+      <Route path='/profesores/:id' element={<ProfesoresInfo />}></Route>
       <Route path='/contactanos' element={<Contacto />}></Route>
       <Route path='/acerca' element={<Acerca />}></Route>
       <Route path='/clases' element={<Clases />}></Route>
-      <Route path='/clases/1' element={<ClaseDetalle />}></Route>
+      <Route path='/clases/:id' element={<ClaseDetalle />}></Route>
     </Routes>
   );
 }
