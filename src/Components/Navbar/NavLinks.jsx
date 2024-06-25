@@ -13,7 +13,7 @@ const NavLinks = () => {
   return (
     <>
       {links.map((link, index) => (
-        <div key={index} className='px-3 text-left md:cursor-pointer hover:'>
+        <div key={index} className=' text-left md:cursor-pointer hover:'>
           <Link to={link.route} className='py-7 hover:text-yellow-400'>
             {link.name}
           </Link>

@@ -10,13 +10,11 @@ const ClaseDetalle = () => {
   const [clase, setClase] = useState('');
   const listaClases = clasesDeDanza;
 
-  const result = listaClases.filter((clase) => clase.id == params.id);
+  const result = listaClases.find((clase) => clase.id == params.id);
 
   useEffect(() => {
-    // console.log(clase[0].titulo);
-    setClase(result[0]);
-    console.log(clase);
-  }, []);
+    setClase(result);
+  }, [result]);
 
   return (
     <Layout>
@@ -27,33 +25,31 @@ const ClaseDetalle = () => {
       />
       <section className='bg-white text-black'>
         <div className='container mx-auto'>
-          <div className='container flex ml-0 h-[420px] py-10 px-20'>
-            <img
-              src={clase.imagen}
-              alt=''
-              className='shadow-[20px_-20px_0_0_rgba(250,204,21,1)] rounded-2xl'
-            />
-          </div>
-
-          <div className='container flex mx-auto justify-around p-10'>
-            <div className='w-1/2'>
-              <h1 className='text-violet-500 font-bold text-2xl pb-5'>
-                {clase.titulo}
-              </h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque
-                porro excepturi iusto, assumenda non aliquid impedit saepe est
-                inventore, architecto delectus laudantium consequuntur odio
-                dolore in quisquam eveniet! Porro, quasi! Lorem ipsum dolor sit
-                amet consectetur, adipisicing elit. Itaque porro excepturi
-                iusto, assumenda non aliquid impedit saepe est inventore,
-                architecto delectus laudantium consequuntur odio dolore in
-                quisquam eveniet! Porro, quasi!
-              </p>
-            </div>
-            <div className='bg-black p-5 rounded-lg relative w-72 h-72'>
-              {/* <div className='bg-black p-5 rounded-lg relative w-72 h-72'> */}
-              <DetalleClaseCard />
+          <div className='mx-auto max-w-screen-xl'>
+            <div className='flex flex-col md:flex-row'>
+              <div className='md:w-1/2'>
+                <div className='container flex h-[420px] py-10 px-20'>
+                  <img
+                    src={clase.imagen}
+                    alt=''
+                    className='shadow-[20px_-20px_0_0_rgba(250,204,21,1)] rounded-2xl w-full object-cover'
+                  />
+                </div>
+              </div>
+              <div className='md:w-1/2 px-6 py-10'>
+                <h1 className='text-violet-500 font-bold text-2xl pb-5'>
+                  {clase.titulo}
+                </h1>
+                <p className='mb-5'>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Itaque porro excepturi iusto, assumenda non aliquid impedit
+                  saepe est inventore, architecto delectus laudantium
+                  consequuntur odio dolore in quisquam eveniet! Porro, quasi!
+                </p>
+                <div className='bg-black p-5 rounded-lg relative w-72 h-72 flex items-center justify-center md:justify-start'>
+                  <DetalleClaseCard />
+                </div>
+              </div>
             </div>
           </div>
         </div>
