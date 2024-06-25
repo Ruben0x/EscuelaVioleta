@@ -32,7 +32,7 @@ const Navbar = () => {
       </div>
       {/* MOBILE NAV */}
       <ul
-        className={`md:hidden bg-black fixed w-full h-full top-0 left-0 transform ${
+        className={`md:hidden pb-20 bg-black fixed w-full h-full left-0 transform ${
           open ? 'translate-x-0' : '-translate-x-full'
         } transition-transform duration-300 ease-in-out z-40`}
       >
